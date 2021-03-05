@@ -6,7 +6,24 @@ from pages.home_page import UnitedUs
 class TestSimpleFilterByName:
 
     @pytest.mark.nondestructive
+    def test_filter_providers_by_need(self, base_url, selenium):
+        '''
+            For the following acceptance criteria of the Public Resource
+            Directory: Given I have loaded all providers in North Carolina
+            When I filter providers by need
+            Then I should see providers filtered by my selected need
+
+            Verify you can filter providers by need in a browser-based,
+            user-interface test: Write a test case with one assertion
+            you would make.
+        '''
+        pass
+
+    @pytest.mark.nondestructive
     def test_search(self, base_url, selenium):
+        '''
+        Excercise #2
+        '''
         home_page = UnitedUs(selenium, base_url).open()
         home_page.filters.search_by_name('service')
 
